@@ -6,17 +6,16 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class MyWizardTelegramBot extends TelegramLongPollingBot {
-    private final static String botUsername = "myFirstWizardBot";
-    private final static String botToken = "5286633261:AAFYixsvrEsLZ-uKPpmdAJfcyxrUivrQmzo";
+    private final PropertiesHandler handler = new PropertiesHandler();
 
     @Override
     public String getBotUsername() {
-        return botUsername;
+        return handler.getUsername();
     }
 
     @Override
     public String getBotToken() {
-        return botToken;
+        return handler.getBotToken();
     }
 
     @Override
